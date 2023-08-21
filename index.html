@@ -1,150 +1,91 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Weather App</title>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Weather App</title>
 
-    <link rel="stylesheet" href="./css/all.min.css">
-    <link rel="stylesheet" href="./css/bootstrap.min.css">
-    <link rel="stylesheet" href="./css/style.css">
+        <link rel="stylesheet" href="./css/all.min.css">
+        <link rel="stylesheet" href="./css/bootstrap.min.css">
+        <link rel="stylesheet" href="./css/style.css">
 
-</head>
+    </head>
 
-<body>
-    <nav class="navbar navbar-expand-lg fixed-top p-1">
-        <div class="container">
-          <a class="navbar-brand d-flex justify-content-between align-items-center" href="#">
-            <i class="fa-brands fa-cloudversify fs-1 me-3 fw-bold"></i>
-            <div>
-                <small class="fw-bold my-0">weather</small>
-                <p class="text-white-50 my-0">tagline goes here</p>
+    <body>
+        <nav class="navbar navbar-expand-lg fixed-top p-1">
+            <div class="container">
+            <a class="navbar-brand d-flex justify-content-between align-items-center" href="#">
+                <i class="fa-brands fa-cloudversify fs-1 me-3 fw-bold"></i>
+                <div>
+                    <small class="fw-bold my-0">weather</small>
+                    <p class="text-white-50 my-0">tagline goes here</p>
+                </div>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <i class="fa-solid fa-bars-progress text-white fs-24"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">News</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Live cameras</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Photos</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Contact</a>
+                </li>
             </div>
-          </a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <i class="fa-solid fa-bars-progress text-white fs-24"></i>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">Home</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">News</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Live cameras</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Photos</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Contact</a>
-              </li>
-          </div>
+            </div>
+        </nav>
+        <!-- end navbar -->
+        <!-- start slider  -->
+        <div class="slider py-5">
+            <div class="container">
+                    <div class="search-container position-relative">
+                        <input id="searchIndput" class="form-control p-2" type="text" placeholder="find your location..">
+                    <div  class="position-absolute myBtn rounded-pill px-4 text-white btn ">Find</div>
+                    </div>
+            </div>
         </div>
-      </nav>
-    <!-- end navbar -->
-    <!-- start slider  -->
+        <!-- end slider  -->
 
-    <div class="slider py-5">
-        <div class="container">
+        <!-- start data -->
+        <div class="data position-relative">
+            <div class="container position-absolute">
+                <div id="myRow" class="row  g-2 justify-content-center"></div>
+            </div>
+        </div>
+        <!-- end data -->
+        <!-- start subscrip -->
+        <div class="sub p-4">
+            <div class="container">
                 <div class="search-container position-relative">
-                    <input class="form-control p-2" type="text" placeholder="find your location..">
-                <div  class="position-absolute myBtn rounded-pill px-4 text-white btn ">Find</div>
+                    <input class="form-control p-3 rounded-pill" type="text" placeholder="Enter your email to subscribe...">
+                <div  class="position-absolute myBtn rounded-pill py-2 px-5 text-white btn ">Subscribe</div>
                 </div>
+                <div class="text-center my-3 all-icons pt-3">
+                    <i class="fa-brands fa-facebook-f"></i>
+                    <i class="fa-brands mx-3 fa-x-twitter"></i>
+                    <i class="fa-brands fa-google"></i>
+                    <i class="fa-brands ms-3 fa-pinterest-p"></i>
+                </div>
+                <p class="text-center">copyright <span class="fw-bold text-white">&copy;</span> 2023  <span class="name fw-bold  text-white">Mohamed Gamal.</span> Designed by me. All rights reserved</p>
         </div>
-    </div>
-    <!-- end slider  -->
-
-    <!-- start data -->
-    <div class="data position-relative">
-        <div class="container position-absolute">
-            <div class="row g-2 justify-content-center">
-                <div class="col-lg-4 col-md-6 mb-4">
-                    <div class="item mb-3">
-                        <div class="head fw-bold text-capitalize d-flex justify-content-between align-items-center p-2">
-                            <p class="m-0">sunday</p>
-                            <p class="m-0">20 august</p>
-                        </div>
-                        <div class="body p-3">
-                            <p class="mt-1 fw-bold">Cairo</p>
-                            <p class="my-1 degree fw-bold">26<sup>o</sup>C</p>
-                            <div class="icon my-1 ms-3 fs-2"><i class="fa-regular fa-moon"></i></div>
-                            <p class="my-2 clear fw-bold">Clear</p>
-                        </div>
-                        <div class="footer d-flex p-2">
-                            <div class="cont me-3"><i class="fa-solid fa-umbrella"></i> 20%</div>
-                            <div class="cont me-3"><i class="fa-solid fa-wind"></i> 18km/h</div>
-                            <div class="cont me-3"><i class="fa-regular fa-compass"></i> east</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 mb-4">
-                    <div class="item mb-3">
-                        <div class="head fw-bold text-capitalize d-flex justify-content-between align-items-center p-2">
-                            <p class="m-0">sunday</p>
-                            <p class="m-0">20 august</p>
-                        </div>
-                        <div class="body p-3">
-                            <p class="mt-1 fw-bold">Cairo</p>
-                            <p class="my-1 degree fw-bold">26<sup>o</sup>C</p>
-                            <div class="icon my-1 ms-3 fs-2"><i class="fa-regular fa-moon"></i></div>
-                            <p class="my-2 clear fw-bold">Clear</p>
-                        </div>
-                        <div class="footer d-flex p-2">
-                            <div class="cont me-3"><i class="fa-solid fa-umbrella"></i> 20%</div>
-                            <div class="cont me-3"><i class="fa-solid fa-wind"></i> 18km/h</div>
-                            <div class="cont me-3"><i class="fa-regular fa-compass"></i> east</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 mb-4">
-                    <div class="item mb-3">
-                        <div class="head fw-bold text-capitalize d-flex justify-content-between align-items-center p-2">
-                            <p class="m-0">sunday</p>
-                            <p class="m-0">20 august</p>
-                        </div>
-                        <div class="body p-3">
-                            <p class="mt-1 fw-bold">Cairo</p>
-                            <p class="my-1 degree fw-bold">26<sup>o</sup>C</p>
-                            <div class="icon my-1 ms-3 fs-2"><i class="fa-regular fa-moon"></i></div>
-                            <p class="my-2 clear fw-bold">Clear</p>
-                        </div>
-                        <div class="footer d-flex p-2">
-                            <div class="cont me-3"><i class="fa-solid fa-umbrella"></i> 20%</div>
-                            <div class="cont me-3"><i class="fa-solid fa-wind"></i> 18km/h</div>
-                            <div class="cont me-3"><i class="fa-regular fa-compass"></i> east</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
         </div>
-    </div>
-    <!-- end data -->
-    <!-- start subscrip -->
-    <div class="sub p-4">
-        <div class="container">
-            <div class="search-container position-relative">
-                <input class="form-control p-3 rounded-pill" type="text" placeholder="Enter your email to subscribe...">
-            <div  class="position-absolute myBtn rounded-pill py-2 px-5 text-white btn ">Subscribe</div>
-            </div>
-            <div class="text-center my-3 all-icons pt-3">
-                <i class="fa-brands fa-facebook-f"></i>
-                <i class="fa-brands mx-3 fa-x-twitter"></i>
-                <i class="fa-brands fa-google"></i>
-                <i class="fa-brands ms-3 fa-pinterest-p"></i>
-            </div>
-            <p class="text-center">copyright <span class="fw-bold text-white">&copy;</span> 2023  <span class="name fw-bold  text-white">Mohamed Gamal.</span> Designed by me. All rights reserved</p>
-    </div>
-    </div>
-    <!-- end subscrip -->
+        <!-- end subscrip -->
 
-    <script src="./js/bootstrap.bundle.min.js"></script>
-    <script src="js/all.min.js"></script>
-    <script src="./js/code.js"></script>
-</body>
+        <script src="./js/bootstrap.bundle.min.js"></script>
+        <script src="js/all.min.js"></script>
+        <script src="js/main.js"></script>
+    </body>
 
 </html>

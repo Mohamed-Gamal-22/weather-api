@@ -80,14 +80,14 @@
     height: 700px;
   }
 }
-@media screen and (max-width: 776px) {
+@media screen and (max-width: 785px) {
   .data {
     height: 780px;
   }
 }
 @media screen and (max-width: 767px) {
   .data {
-    height: 1100px;
+    height: 1300px;
   }
 }
 .data .item {
