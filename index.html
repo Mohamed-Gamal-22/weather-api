@@ -1,91 +1,138 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/animate.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <link rel="icon" href="images/cloud-computing.png" />
+    <title>Weather App</title>
 
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Weather App</title>
+    <link rel="stylesheet" href="./css/all.min.css" />
+    <link rel="stylesheet" href="./css/bootstrap.min.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
 
-        <link rel="stylesheet" href="./css/all.min.css">
-        <link rel="stylesheet" href="./css/bootstrap.min.css">
-        <link rel="stylesheet" href="./css/style.css">
-
-    </head>
-
-    <body>
-        <nav class="navbar navbar-expand-lg fixed-top p-1">
-            <div class="container">
-            <a class="navbar-brand d-flex justify-content-between align-items-center" href="#">
-                <i class="fa-brands fa-cloudversify fs-1 me-3 fw-bold"></i>
-                <div>
-                    <small class="fw-bold my-0">weather</small>
-                    <p class="text-white-50 my-0">tagline goes here</p>
-                </div>
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <i class="fa-solid fa-bars-progress text-white fs-24"></i>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">News</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Live cameras</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Photos</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Contact</a>
-                </li>
-            </div>
-            </div>
-        </nav>
-        <!-- end navbar -->
-        <!-- start slider  -->
-        <div class="slider py-5">
-            <div class="container">
-                    <div class="search-container position-relative">
-                        <input id="searchIndput" class="form-control p-2" type="text" placeholder="find your location..">
-                    <div  class="position-absolute myBtn rounded-pill px-4 text-white btn ">Find</div>
-                    </div>
-            </div>
+  <body>
+    <nav class="navbar navbar-expand-lg fixed-top p-1">
+      <div class="container">
+        <a
+          class="navbar-brand d-flex justify-content-between align-items-center"
+          href="#"
+        >
+          <i class="fa-brands fa-cloudversify fs-1 me-3 fw-bold"></i>
+          <div>
+            <small class="fw-bold my-0">weather</small>
+            <p class="text-white-50 my-0">tagline goes here</p>
+          </div>
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <i class="fa-solid fa-bars-progress text-white fs-24"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">News</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Live cameras</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Photos</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Contact</a>
+            </li>
+          </ul>
         </div>
-        <!-- end slider  -->
-
-        <!-- start data -->
-        <div class="data position-relative">
-            <div class="container position-absolute">
-                <div id="myRow" class="row  g-2 justify-content-center"></div>
-            </div>
+      </div>
+    </nav>
+    <!-- end navbar -->
+    <!-- start slider  -->
+    <div class="slider py-5">
+      <div class="container">
+        <div class="search-container position-relative">
+          <input
+            id="searchIndput"
+            class="form-control p-2"
+            type="text"
+            placeholder="find your location.."
+          />
+          <div class="position-absolute myBtn rounded-pill px-4 text-white btn">
+            Find
+          </div>
         </div>
-        <!-- end data -->
-        <!-- start subscrip -->
-        <div class="sub p-4">
-            <div class="container">
-                <div class="search-container position-relative">
-                    <input class="form-control p-3 rounded-pill" type="text" placeholder="Enter your email to subscribe...">
-                <div  class="position-absolute myBtn rounded-pill py-2 px-5 text-white btn ">Subscribe</div>
-                </div>
-                <div class="text-center my-3 all-icons pt-3">
-                    <i class="fa-brands fa-facebook-f"></i>
-                    <i class="fa-brands mx-3 fa-x-twitter"></i>
-                    <i class="fa-brands fa-google"></i>
-                    <i class="fa-brands ms-3 fa-pinterest-p"></i>
-                </div>
-                <p class="text-center">copyright <span class="fw-bold text-white">&copy;</span> 2023  <span class="name fw-bold  text-white">Mohamed Gamal.</span> Designed by me. All rights reserved</p>
-        </div>
-        </div>
-        <!-- end subscrip -->
+      </div>
+    </div>
+    <!-- end slider  -->
 
-        <script src="./js/bootstrap.bundle.min.js"></script>
-        <script src="js/all.min.js"></script>
-        <script src="js/main.js"></script>
-    </body>
+    <!-- start data -->
+    <div class="data position-relative">
+      <div class="container position-absolute">
+        <div id="myRow" class="row g-2 justify-content-center"></div>
+      </div>
+    </div>
+    <!-- end data -->
+    <!-- start subscrip -->
+    <div class="sub p-4">
+      <div class="container">
+        <div class="search-container position-relative">
+          <input
+            class="form-control p-3 rounded-pill"
+            type="text"
+            placeholder="Enter your email to subscribe..."
+          />
+          <div
+            class="position-absolute myBtn rounded-pill py-2 px-5 text-white btn"
+          >
+            Subscribe
+          </div>
+        </div>
+        <div class="text-center my-3 all-icons pt-3 wow animate__zoomIn"
+        >
+          <i
+            class="fa-brands fa-facebook-f"
+          ></i>
+          <i
+            class="fa-brands mx-3 fa-x-twitter"
+          ></i>
+          <i
+            class="fa-brands fa-google"
+          ></i>
+          <i
+            class="fa-brands ms-3 fa-pinterest-p  "
+          ></i>
+        </div>
+        <p class="text-center">
+          copyright <span class="fw-bold text-white">&copy;</span> 2023
+          <span class="name fw-bold text-white">Mohamed Gamal.</span> Designed
+          by me. All rights reserved
+        </p>
+      </div>
+    </div>
+    <!-- end subscrip -->
 
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <script src="js/all.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/wow.min.js"></script>
+    <script>
+      new WOW().init();
+    </script>
+  </body>
 </html>

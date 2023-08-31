@@ -55,7 +55,9 @@ async function getCurrentDay(location = "cairo") {
 function display(allData) {
   let cartona = "";
   for (let i = 0; i <= 2; i++) {
-    cartona += `<div class="col-lg-4 col-md-6 mb-4">
+    cartona += `<div class="col-lg-4 col-md-6 mb-4 wow ${
+      i == 0 ? "animate__fadeInLeft" : i == 1 ? "animate__fadeInUp" : i == 2 ? "animate__fadeInRight" : ""
+    }" data-wow-delay=".3s">
     <div class="item mb-3">
         <div class="head fw-bold text-capitalize d-flex justify-content-between align-items-center p-2">
             <p class="m-0">${prepareDate()[i]}</p>
@@ -63,16 +65,28 @@ function display(allData) {
         </div>
         <div class="body p-3">
             <p class="mt-1 fw-bold">${allData.location.name}</p>
-            <p class="my-1 degree fw-bold">${allData.forecast.forecastday[i].day.avgtemp_c}<sup>o</sup>C</p>
+            <p class="my-1 degree fw-bold">${
+              allData.forecast.forecastday[i].day.avgtemp_c
+            }<sup>o</sup>C</p>
             <div class="icon my-1 ms-3 fs-2">
-            <img class="w-25" src="${allData.forecast.forecastday[i].day.condition.icon}"/>
+            <img class="w-25" src="${
+              allData.forecast.forecastday[i].day.condition.icon
+            }"/>
             </div>
-            <p class="my-2 clear fw-bold">${allData.forecast.forecastday[i].day.condition.text}</p>
+            <p class="my-2 clear fw-bold">${
+              allData.forecast.forecastday[i].day.condition.text
+            }</p>
         </div>
         <div class="footer d-flex p-2">
-            <div class="cont me-3"><i class="fa-solid fa-umbrella"></i> ${allData.forecast.forecastday[i].day.maxwind_kph}%</div>
-            <div class="cont me-3"><i class="fa-solid fa-wind"></i> ${allData.forecast.forecastday[i].day.maxwind_mph}km/h</div>
-            <div class="cont me-3"><i class="fa-regular fa-compass"></i> ${allData.forecast.forecastday[i].hour[0].wind_dir}</div>
+            <div class="cont me-3"><i class="fa-solid fa-umbrella"></i> ${
+              allData.forecast.forecastday[i].day.maxwind_kph
+            }%</div>
+            <div class="cont me-3"><i class="fa-solid fa-wind"></i> ${
+              allData.forecast.forecastday[i].day.maxwind_mph
+            }km/h</div>
+            <div class="cont me-3"><i class="fa-regular fa-compass"></i> ${
+              allData.forecast.forecastday[i].hour[0].wind_dir
+            }</div>
         </div>
     </div>
   </div>`;
